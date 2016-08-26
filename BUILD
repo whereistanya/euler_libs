@@ -1,7 +1,19 @@
 cc_library(
+    name = "binary",
+    srcs = ["binary.h"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
     name = "combinations",
     srcs = ["combinations.cc"],
     hdrs = ["combinations.h"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "continuedfraction",
+    srcs = ["continuedfraction.h"],
     visibility = ["//visibility:public"],
 )
 
@@ -13,9 +25,35 @@ cc_library(
 )
 
 cc_library(
+    name = "coprime",
+    srcs = ["coprime.cc"],
+    hdrs = ["coprime.h"],
+    deps = [":primefactor"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
     name = "multiple",
     srcs = ["multiple.cc"],
     hdrs = ["multiple.h"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "matrix",
+    srcs = ["matrix.h"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "palindrome",
+    srcs = ["palindrome.h"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "pandigital",
+    srcs = ["pandigital.h"],
     visibility = ["//visibility:public"],
 )
 
@@ -43,7 +81,6 @@ cc_library(
 
 cc_library(
     name = "triangle",
-    srcs = ["triangle.cc"],
-    hdrs = ["triangle.h"],
+    srcs = ["triangle.h"],
     visibility = ["//visibility:public"],
 )

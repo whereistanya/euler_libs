@@ -25,7 +25,7 @@ int PrimeFactorer::GetPrimeFactorCount(long composite) {
 int PrimeFactorer::GetFactorCount(long composite) {
   SetDuplicates(true);
   vector<int>* exponents = new vector<int>;
-  //const vector<long>& primes = GetPrimeFactorsWithExponents(composite, exponents);
+  GetPrimeFactorsWithExponents(composite, exponents);
 
   int factors = 1;
   for (vector<int>::const_iterator it = exponents->begin();

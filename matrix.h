@@ -162,7 +162,6 @@ public:
 				double ik = get(i, k); // we'll change this in a minute, so save it
 				for (int j = k; j < maxwidth; ++j) {
 					double reduce_by = get(k, j) * ik / get(k, k);
-					double newvalue =  get(i, j) - reduce_by;
 					set(i, j, get(i, j) - reduce_by);
 				}
 				set(i, k, 0);

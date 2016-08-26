@@ -29,7 +29,8 @@ struct Fraction {
 
 template <class Type>
 static std::ostream & operator<<(ostream &o, const Fraction<Type>& f) {
-  cout << f.n << "/" << f.d;
+  o << f.n << "/" << f.d;
+  return o;
 }
 
 template <class Type>
